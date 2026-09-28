@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Phoenix Malls — Web app
 
-## Getting Started
+Standalone Next.js application for discovering Phoenix Malls on an interactive map. Shared mall data, timezone-aware status logic, filtering, and tests are included in `packages/core`; no parent repository is required.
 
-First, run the development server:
+## Requirements
 
-```bash
+- Node.js 22 or later
+- npm
+
+## Install and run
+
+From this directory:
+
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm test
+npm run lint
+npm run build
+```
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app` — Next.js App Router entry points and global styles.
+- `src/components` — interactive map, mall details, search, filters, and reusable UI.
+- `packages/core/src` — mall model and mock repository, geographic bounds, shared filtering, and local-time operating status.
+- `packages/core/test` — tests for filters, geographic bounds, and operating hours.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The map uses Leaflet and OpenStreetMap. Mall contact details, hours, and imagery are mock content and should be verified before production use. Replace the mock repository in `packages/core` with a REST-backed implementation without coupling API access to the UI.

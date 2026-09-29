@@ -5,15 +5,15 @@ Standalone Next.js application for discovering Phoenix Malls on an interactive m
 ## Requirements
 
 - Node.js 22 or later
-- npm
+- Yarn 1.22 or later
 
 ## Install and run
 
 From this directory:
 
 ```sh
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -21,9 +21,9 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Checks
 
 ```sh
-npm test
-npm run lint
-npm run build
+yarn test
+yarn lint
+yarn build
 ```
 
 ## Structure

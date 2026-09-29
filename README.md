@@ -2,6 +2,12 @@
 
 A responsive Next.js application for exploring Phoenix Malls on an interactive map. Select India to see its mall locations, search by mall or city, filter by current open/closed status, and open a mall's map popup and details.
 
+## Project links
+
+- **Web application:** [Open the live web app](https://web-five-gamma-21.vercel.app/)
+- **Android app:** [Download the APK](https://drive.google.com/file/d/1eaGxZntxvla7QhpMufvYdRn57mf53rpm/view?usp=sharing)
+- **GitHub:** [Web repository](https://github.com/subbuparagond/web) · [Android repository](https://github.com/subbuparagond/mobile)
+
 ## Requirements
 
 - Node.js 22 or later
